@@ -56,6 +56,16 @@ nav
   width: 600px;
   margin-left: -300px;
   z-index: 10;
+  opacity: 0;
+  -webkit-transition: all 1s ease-in-out;
+     -moz-transition: all 1s ease-in-out;
+       -o-transition: all 1s ease-in-out;
+          transition: all 1s ease-in-out;
+}
+
+nav.active
+{
+  opacity: 1;
 }
 
 nav ul
@@ -100,13 +110,36 @@ nav ul li.current a { }
   min-height: 100%;
 }
 
-.intro img
+.intro .logo
 {
   display: block;
   position: absolute;
   left: 50%;
   top: 50%;
+  margin: -75px 0 0 -125px;
+  width: 250px;
+  height: 150px;
+  opacity: 0;
+  -webkit-transform: rotate(-15deg);
+     -moz-transform: rotate(-15deg);
+      -ms-transform: rotate(-15deg);
+       -o-transform: rotate(-15deg);
+  -webkit-transition: all .5s ease-in-out;
+     -moz-transition: all .5s ease-in-out;
+       -o-transition: all .5s ease-in-out;
+          transition: all .5s ease-in-out;
+}
+
+.intro .logo.active
+{
+  opacity: 1;
   margin: -100px 0 0 -152px;
+  width: 305px;
+  height: 200px;
+  -webkit-transform: rotate(0deg);
+     -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+       -o-transform: rotate(0deg);
 }
 
 .intro_video
