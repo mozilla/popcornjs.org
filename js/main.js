@@ -8,7 +8,7 @@ jQuery(function($) {
     $('.intro').height($(window).height());
   });
 
-  // Animate the appearance of the logo and navigation.
+  // Once the page has finished loading, animate the appearance of the logo and navigation.
   $(window).load(function () {
     $('.logo').addClass('active');
     $('nav').addClass('active');
