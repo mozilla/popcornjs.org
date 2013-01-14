@@ -9,8 +9,10 @@ jQuery(function($) {
   });
 
   // Animate the appearance of the logo and navigation.
-  $('.logo').addClass('active');
-  $('nav').addClass('active');
+  $(window).load(function () {
+    $('.logo').addClass('active');
+    $('nav').addClass('active');
+  });
 
   // Smooth scrolling for local links.
   $('a').smoothScroll({offset: -30});
