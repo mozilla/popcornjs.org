@@ -134,31 +134,87 @@ article.text div + div
   width: 30%;
 }
 
-.lovers div,
-.examples div
+.popcorn_users div.wrapped,
+.examples div.wrapped
 {
   margin: 0 auto;
   padding: 2em 0;
   width: 880px;
 }
 
-.lovers
+.popcorn_users
 {
   background: #fc5270;
-  background: -moz-linear-gradient(left,  #fc5270 0%, #ff1b25 100%);
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#fc5270), color-stop(100%,#ff1b25));
   background: -webkit-linear-gradient(left,  #fc5270 0%,#ff1b25 100%);
-  background: -o-linear-gradient(left,  #fc5270 0%,#ff1b25 100%);
+  background: -moz-linear-gradient(left,  #fc5270 0%, #ff1b25 100%);
   background: -ms-linear-gradient(left,  #fc5270 0%,#ff1b25 100%);
+  background: -o-linear-gradient(left,  #fc5270 0%,#ff1b25 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#fc5270), color-stop(100%,#ff1b25));
   background: linear-gradient(to right,  #fc5270 0%,#ff1b25 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc5270', endColorstr='#ff1b25',GradientType=1 );
   padding-bottom: 1.5em;
 }
 
-.lovers h2
+.popcorn_users h2
 {
   color: #fff;
   margin-top: 0;
+}
+
+.popcorn_users .popcorn_users_logos_container
+{
+  overflow: hidden;
+  position: relative;
+  margin-top: -20px;
+  width: 882px;
+  height: 150px;
+}
+
+.popcorn_users img
+{
+  position: absolute;
+  bottom: -130px;
+}
+
+.popcorn_users.active img
+{
+  -webkit-animation-iteration-count: 1;
+     -moz-animation-iteration-count: 1;
+        -webkit-animation-fill-mode: forwards; 
+           -moz-animation-fill-mode: forwards; 
+         -webkit-animation-duration: .75s;
+            -moz-animation-duration: .75s;
+                 animation-duration: .75s;
+             -webkit-animation-name: pop_in;
+                -moz-animation-name: pop_in;
+                     animation-name: pop_in;
+}
+
+.popcorn_users img.image01 { left: 0;      animation-delay: .25s; -moz-animation-delay: .25s; -webkit-animation-delay: .25s; -o-animation-delay: .25s; }
+.popcorn_users img.image02 { left: 126px;  animation-delay: .40s; -moz-animation-delay: .40s; -webkit-animation-delay: .40s; -o-animation-delay: .40s; }
+.popcorn_users img.image03 { left: 252px;  animation-delay: .85s; -moz-animation-delay: .85s; -webkit-animation-delay: .85s; -o-animation-delay: .85s; }
+.popcorn_users img.image04 { left: 378px;  animation-delay: .75s; -moz-animation-delay: .75s; -webkit-animation-delay: .75s; -o-animation-delay: .75s; }
+.popcorn_users img.image05 { left: 504px;  animation-delay: .20s; -moz-animation-delay: .20s; -webkit-animation-delay: .20s; -o-animation-delay: .20s; }
+.popcorn_users img.image06 { left: 630px;  animation-delay: .55s; -moz-animation-delay: .55s; -webkit-animation-delay: .55s; -o-animation-delay: .55s; }
+.popcorn_users img.image07 { left: 756px;  animation-delay: .80s; -moz-animation-delay: .80s; -webkit-animation-delay: .80s; -o-animation-delay: .80s; }
+.popcorn_users img.image08 { left: 0;      animation-delay: .45s; -moz-animation-delay: .45s; -webkit-animation-delay: .45s; -o-animation-delay: .45s; }
+.popcorn_users img.image09 { left: 126px;  animation-delay: .70s; -moz-animation-delay: .70s; -webkit-animation-delay: .70s; -o-animation-delay: .70s; }
+.popcorn_users img.image10 { left: 252px;  animation-delay: .30s; -moz-animation-delay: .30s; -webkit-animation-delay: .30s; -o-animation-delay: .30s; }
+.popcorn_users img.image11 { left: 378px;  animation-delay: .65s; -moz-animation-delay: .65s; -webkit-animation-delay: .65s; -o-animation-delay: .65s; }
+.popcorn_users img.image12 { left: 504px;  animation-delay: .50s; -moz-animation-delay: .50s; -webkit-animation-delay: .50s; -o-animation-delay: .50s; }
+.popcorn_users img.image13 { left: 630px;  animation-delay: .60s; -moz-animation-delay: .60s; -webkit-animation-delay: .60s; -o-animation-delay: .60s; }
+.popcorn_users img.image14 { left: 756px;  animation-delay: .35s; -moz-animation-delay: .35s; -webkit-animation-delay: .35s; -o-animation-delay: .35s; }
+
+@-moz-keyframes pop_in {
+  from { bottom: -130px; }
+  75%  { bottom: 20px; }
+  to   { bottom: 0px; }
+}
+
+@-webkit-keyframes pop_in {
+  from { bottom: -130px; }
+  75%  { bottom: 20px; }
+  to   { bottom: 0px; }
 }
 
 .examples

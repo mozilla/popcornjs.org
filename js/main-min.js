@@ -1,0 +1,1 @@
+jQuery(function(e){function t(t,n,r){e(t).waypoint(function(){e(n).addClass("active")},{offset:r})}e(".intro").height(e(window).height());e(window).on("resize orientationChanged",function(){e(".intro").height(e(window).height())});e("a").smoothScroll({offset:-30});t(".popcorn_users",".popcorn_users",500)});
