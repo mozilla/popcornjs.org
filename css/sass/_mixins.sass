@@ -1,0 +1,26 @@
+// Animations
+
+@mixin animation($string)
+  -webkit-animation: $string
+  -moz-animation:    $string
+  -o-animation:      $string
+  animation:         $string
+
+@mixin animation-delay($string)
+  -webkit-animation-delay: $string
+  -moz-animation-delay:    $string
+  -o-animation-delay:      $string
+  animation-delay:         $string
+
+@mixin keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+
+  @-moz-keyframes #{$name}
+    @content
+
+  @-o-keyframes #{$name}
+    @content
+
+  @keyframes #{$name}
+    @content
