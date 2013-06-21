@@ -9,3 +9,4 @@ ehthumbs.db
 Thumbs.db
 
 # Project-specific files.
+.sass-cache
