@@ -45,20 +45,21 @@ body.home
 
     h2
       color: white
-      margin-top: 0
+      margin-bottom: 1em
 
     &.active img
       @include animation-iteration-count(1)
       @include animation-fill-mode(forwards)
       @include animation-duration(.75s)
-      @include animation(pop-in)
+      @include animation-name(pop-in)
 
     .content
+      overflow: visible
+
       div
         position: relative
-        margin-top: -20px
         width: 882px
-        height: 150px
+        height: 130px
         overflow: hidden
        
         img
