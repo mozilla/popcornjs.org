@@ -1,0 +1,136 @@
+body.home
+
+  .intro
+    position: relative
+    width: 100%
+    height: 100%
+    min-height: 100%
+
+    .logo
+      display: block
+      position: absolute
+      left: 50%
+      top: 50%
+      margin: -75px 0 0 -125px
+      width: 250px
+      height: 150px
+      opacity: 0
+      @include transform(rotate(-15deg))
+      @include transition(all .5s ease-in-out)
+
+      &.active
+        opacity: 1
+        margin: -100px 0 0 -152px
+        width: 305px
+        height: 200px
+        @include transform(rotate(0deg))
+
+  .intro_video
+    background: #000
+    width: 100%
+
+  .text .content
+    div
+      float: left
+      margin-right: 5%
+      width: 65%
+
+      & + div
+        margin-right: 0
+        width: 30%
+
+  .popcorn_users
+    @include background-image(linear-gradient(left, #fc5270 0%, #ff1b25 100%))
+    padding-bottom: 1.5em
+
+    h2
+      color: white
+      margin-top: 0
+
+    &.active img
+      @include animation-iteration-count(1)
+      @include animation-fill-mode(forwards)
+      @include animation-duration(.75s)
+      @include animation(pop-in)
+
+    .content
+      div
+        position: relative
+        margin-top: -20px
+        width: 882px
+        height: 150px
+        overflow: hidden
+       
+        img
+          position: absolute
+          bottom: -130px
+
+          &.image01
+            left: 0      
+            @include animation-delay(0.25s)
+
+          &.image02
+            left: 126px  
+            @include animation-delay(0.40s)
+
+          &.image03
+            left: 252px  
+            @include animation-delay(0.85s)
+
+          &.image04
+            left: 378px  
+            @include animation-delay(0.75s)
+
+          &.image05
+            left: 504px  
+            @include animation-delay(0.20s)
+
+          &.image06
+            left: 630px  
+            @include animation-delay(0.55s)
+
+          &.image07
+            left: 756px  
+            @include animation-delay(0.80s)
+
+          &.image08
+            left: 0      
+            @include animation-delay(0.45s)
+
+          &.image09
+            left: 126px  
+            @include animation-delay(0.70s)
+
+          &.image10
+            left: 252px  
+            @include animation-delay(0.30s)
+
+          &.image11
+            left: 378px  
+            @include animation-delay(0.65s)
+
+          &.image12
+            left: 504px  
+            @include animation-delay(0.50s)
+
+          &.image13
+            left: 630px  
+            @include animation-delay(0.60s)
+
+          &.image14
+            left: 756px  
+            @include animation-delay(0.35s)
+
+  .examples
+    background: rgba(0, 0, 0, .2)
+
+    h2
+      margin-bottom: 1em
+
+    img
+      display: block
+      float: left
+      margin: 0 2em 2em 0
+
+      &:nth-child(3n+1)
+        margin-right: 0

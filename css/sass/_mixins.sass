@@ -12,6 +12,21 @@
   -o-animation-delay:      $string
   animation-delay:         $string
 
+@mixin animation-iteration-count($string)
+  -webkit-animation-iteration-count: $string
+  -moz-animation-iteration-count:    $string
+  animation-iteration-count:         $string
+
+@mixin animation-fill-mode($string)
+  -webkit-animation-fill-mode: $string 
+  -moz-animation-fill-mode:    $string
+  animation-fill-mode:         $string
+
+@mixin animation-duration($string)
+  -webkit-animation-duration: $string
+  -moz-animation-duration:    $string
+  animation-duration:         $string
+
 @mixin keyframes($name)
   @-webkit-keyframes #{$name}
     @content
