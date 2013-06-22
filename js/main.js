@@ -48,12 +48,9 @@ jQuery(function($) {
     };
 
     $.each(cues, function(cue, parameters) {
-      console.log(parameters.time);
-      console.log(parameters.target);
       video.code({
         start:   parameters.time,
         onStart: function() {
-          console.log('yay!');
           $.scrollTo(parameters.target, 1000, {
             offset: -95
           });
