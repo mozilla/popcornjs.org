@@ -55,23 +55,31 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block; }
 
 /* line 3, sass/_base.sass */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative; }
+
+/* line 7, sass/_base.sass */
 body {
   background: url('../img/background.png?1371780901') fixed;
   color: #333333;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.5rem; }
 
-/* line 9, sass/_base.sass */
+/* line 13, sass/_base.sass */
 a {
   -webkit-transition: color 0.1s;
   -moz-transition: color 0.1s;
   -o-transition: color 0.1s;
-  transition: color 0.1s; }
-  /* line 12, sass/_base.sass */
+  transition: color 0.1s;
+  text-decoration: none; }
+  /* line 17, sass/_base.sass */
   a:hover {
     color: #ff1b25; }
 
-/* line 15, sass/_base.sass */
+/* line 20, sass/_base.sass */
 h1,
 h2,
 h3,
@@ -81,15 +89,15 @@ h5 {
   font-weight: normal;
   margin: 0; }
 
-/* line 24, sass/_base.sass */
+/* line 29, sass/_base.sass */
 h2 {
   font-size: 30px; }
 
-/* line 27, sass/_base.sass */
+/* line 32, sass/_base.sass */
 p {
   margin: 1.5rem 0; }
 
-/* line 30, sass/_base.sass */
+/* line 35, sass/_base.sass */
 nav {
   background: white;
   border: 1px solid #bfbfbf;
@@ -106,13 +114,13 @@ nav {
   -moz-transition: all 1s ease-in-out;
   -o-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out; }
-  /* line 44, sass/_base.sass */
+  /* line 49, sass/_base.sass */
   nav.active {
     opacity: 1; }
-  /* line 48, sass/_base.sass */
+  /* line 53, sass/_base.sass */
   nav ul li {
     display: inline; }
-  /* line 51, sass/_base.sass */
+  /* line 56, sass/_base.sass */
   nav ul a {
     color: #333333;
     font-size: 15px;
@@ -120,83 +128,112 @@ nav {
     padding: 1em;
     text-decoration: none; }
 
-/* line 58, sass/_base.sass */
+/* line 63, sass/_base.sass */
 section {
   overflow: hidden;
   *zoom: 1;
   margin: 0 auto;
   width: 100%; }
-  /* line 63, sass/_base.sass */
+  /* line 68, sass/_base.sass */
   section .content {
     overflow: hidden;
     *zoom: 1;
     margin: 0 auto;
     padding: 2em 0;
     width: 880px; }
-  /* line 69, sass/_base.sass */
-  section.text .content {
+  /* line 74, sass/_base.sass */
+  section.text .content, body.home section.intro .content {
     padding: 2em 0 1em 0; }
 
 @-webkit-keyframes pop-in {
-  /* line 76, sass/_base.sass */
+  /* line 81, sass/_base.sass */
   from {
     bottom: -130px; }
 
-  /* line 78, sass/_base.sass */
+  /* line 83, sass/_base.sass */
   75% {
     bottom: 20px; }
 
-  /* line 80, sass/_base.sass */
+  /* line 85, sass/_base.sass */
   to {
     bottom: 0px; } }
 
 @-moz-keyframes pop-in {
-  /* line 76, sass/_base.sass */
+  /* line 81, sass/_base.sass */
   from {
     bottom: -130px; }
 
-  /* line 78, sass/_base.sass */
+  /* line 83, sass/_base.sass */
   75% {
     bottom: 20px; }
 
-  /* line 80, sass/_base.sass */
+  /* line 85, sass/_base.sass */
   to {
     bottom: 0px; } }
 
 @-o-keyframes pop-in {
-  /* line 76, sass/_base.sass */
+  /* line 81, sass/_base.sass */
   from {
     bottom: -130px; }
 
-  /* line 78, sass/_base.sass */
+  /* line 83, sass/_base.sass */
   75% {
     bottom: 20px; }
 
-  /* line 80, sass/_base.sass */
+  /* line 85, sass/_base.sass */
   to {
     bottom: 0px; } }
 
 @keyframes pop-in {
-  /* line 76, sass/_base.sass */
+  /* line 81, sass/_base.sass */
   from {
     bottom: -130px; }
 
-  /* line 78, sass/_base.sass */
+  /* line 83, sass/_base.sass */
   75% {
     bottom: 20px; }
 
-  /* line 80, sass/_base.sass */
+  /* line 85, sass/_base.sass */
   to {
     bottom: 0px; } }
 
 /* line 3, sass/_home.sass */
-body.home .intro {
+body.home #video {
+  z-index: 1; }
+/* line 6, sass/_home.sass */
+body.home .page_content {
+  z-index: 2; }
+/* line 9, sass/_home.sass */
+body.home .video_container {
+  opacity: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s; }
+  /* line 19, sass/_home.sass */
+  body.home .video_container.ready {
+    opacity: 1; }
+/* line 22, sass/_home.sass */
+body.home #video {
+  background: transparent;
+  display: block;
+  margin: 0 auto;
+  min-height: 100%;
+  width: auto; }
+/* line 29, sass/_home.sass */
+body.home .logo {
   position: relative;
   width: 100%;
   height: 100%;
   min-height: 100%; }
-  /* line 9, sass/_home.sass */
-  body.home .intro .logo {
+  /* line 35, sass/_home.sass */
+  body.home .logo img {
     display: block;
     position: absolute;
     left: 50%;
@@ -214,8 +251,8 @@ body.home .intro {
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out; }
-    /* line 21, sass/_home.sass */
-    body.home .intro .logo.active {
+    /* line 47, sass/_home.sass */
+    body.home .logo img.active {
       opacity: 1;
       margin: -100px 0 0 -152px;
       width: 305px;
@@ -225,20 +262,19 @@ body.home .intro {
       -ms-transform: rotate(0deg);
       -o-transform: rotate(0deg);
       transform: rotate(0deg); }
-/* line 28, sass/_home.sass */
-body.home .intro_video {
-  background: black;
-  width: 100%; }
-/* line 33, sass/_home.sass */
-body.home .text .content div {
-  float: left;
-  margin-right: 5%;
-  width: 65%; }
-  /* line 38, sass/_home.sass */
-  body.home .text .content div + div {
-    margin-right: 0;
-    width: 30%; }
-/* line 42, sass/_home.sass */
+/* line 54, sass/_home.sass */
+body.home .intro {
+  background: rgba(255, 255, 255, 0.75); }
+  /* line 59, sass/_home.sass */
+  body.home .intro .content div {
+    float: left;
+    margin-right: 5%;
+    width: 65%; }
+    /* line 64, sass/_home.sass */
+    body.home .intro .content div + div {
+      margin-right: 0;
+      width: 30%; }
+/* line 68, sass/_home.sass */
 body.home .popcorn_users {
   background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #fc5270), color-stop(100%, #ff1b25));
   background-image: -webkit-linear-gradient(left, #fc5270 0%, #ff1b25 100%);
@@ -246,11 +282,11 @@ body.home .popcorn_users {
   background-image: -o-linear-gradient(left, #fc5270 0%, #ff1b25 100%);
   background-image: linear-gradient(left, #fc5270 0%, #ff1b25 100%);
   padding-bottom: 1.5em; }
-  /* line 46, sass/_home.sass */
+  /* line 72, sass/_home.sass */
   body.home .popcorn_users h2 {
     color: white;
     margin-bottom: 1em; }
-  /* line 50, sass/_home.sass */
+  /* line 76, sass/_home.sass */
   body.home .popcorn_users.active img {
     -webkit-animation-iteration-count: 1;
     -moz-animation-iteration-count: 1;
@@ -265,128 +301,128 @@ body.home .popcorn_users {
     -moz-animation-name: pop-in;
     -o-animation-name: pop-in;
     animation-name: pop-in; }
-  /* line 56, sass/_home.sass */
+  /* line 82, sass/_home.sass */
   body.home .popcorn_users .content {
     overflow: visible; }
-    /* line 59, sass/_home.sass */
+    /* line 85, sass/_home.sass */
     body.home .popcorn_users .content div {
       position: relative;
       width: 882px;
       height: 130px;
       overflow: hidden; }
-      /* line 65, sass/_home.sass */
+      /* line 91, sass/_home.sass */
       body.home .popcorn_users .content div img {
         position: absolute;
         bottom: -130px; }
-        /* line 69, sass/_home.sass */
+        /* line 95, sass/_home.sass */
         body.home .popcorn_users .content div img.image01 {
           left: 0;
           -webkit-animation-delay: 0.25s;
           -moz-animation-delay: 0.25s;
           -o-animation-delay: 0.25s;
           animation-delay: 0.25s; }
-        /* line 73, sass/_home.sass */
+        /* line 99, sass/_home.sass */
         body.home .popcorn_users .content div img.image02 {
           left: 126px;
           -webkit-animation-delay: 0.4s;
           -moz-animation-delay: 0.4s;
           -o-animation-delay: 0.4s;
           animation-delay: 0.4s; }
-        /* line 77, sass/_home.sass */
+        /* line 103, sass/_home.sass */
         body.home .popcorn_users .content div img.image03 {
           left: 252px;
           -webkit-animation-delay: 0.85s;
           -moz-animation-delay: 0.85s;
           -o-animation-delay: 0.85s;
           animation-delay: 0.85s; }
-        /* line 81, sass/_home.sass */
+        /* line 107, sass/_home.sass */
         body.home .popcorn_users .content div img.image04 {
           left: 378px;
           -webkit-animation-delay: 0.75s;
           -moz-animation-delay: 0.75s;
           -o-animation-delay: 0.75s;
           animation-delay: 0.75s; }
-        /* line 85, sass/_home.sass */
+        /* line 111, sass/_home.sass */
         body.home .popcorn_users .content div img.image05 {
           left: 504px;
           -webkit-animation-delay: 0.2s;
           -moz-animation-delay: 0.2s;
           -o-animation-delay: 0.2s;
           animation-delay: 0.2s; }
-        /* line 89, sass/_home.sass */
+        /* line 115, sass/_home.sass */
         body.home .popcorn_users .content div img.image06 {
           left: 630px;
           -webkit-animation-delay: 0.55s;
           -moz-animation-delay: 0.55s;
           -o-animation-delay: 0.55s;
           animation-delay: 0.55s; }
-        /* line 93, sass/_home.sass */
+        /* line 119, sass/_home.sass */
         body.home .popcorn_users .content div img.image07 {
           left: 756px;
           -webkit-animation-delay: 0.8s;
           -moz-animation-delay: 0.8s;
           -o-animation-delay: 0.8s;
           animation-delay: 0.8s; }
-        /* line 97, sass/_home.sass */
+        /* line 123, sass/_home.sass */
         body.home .popcorn_users .content div img.image08 {
           left: 0;
           -webkit-animation-delay: 0.45s;
           -moz-animation-delay: 0.45s;
           -o-animation-delay: 0.45s;
           animation-delay: 0.45s; }
-        /* line 101, sass/_home.sass */
+        /* line 127, sass/_home.sass */
         body.home .popcorn_users .content div img.image09 {
           left: 126px;
           -webkit-animation-delay: 0.7s;
           -moz-animation-delay: 0.7s;
           -o-animation-delay: 0.7s;
           animation-delay: 0.7s; }
-        /* line 105, sass/_home.sass */
+        /* line 131, sass/_home.sass */
         body.home .popcorn_users .content div img.image10 {
           left: 252px;
           -webkit-animation-delay: 0.3s;
           -moz-animation-delay: 0.3s;
           -o-animation-delay: 0.3s;
           animation-delay: 0.3s; }
-        /* line 109, sass/_home.sass */
+        /* line 135, sass/_home.sass */
         body.home .popcorn_users .content div img.image11 {
           left: 378px;
           -webkit-animation-delay: 0.65s;
           -moz-animation-delay: 0.65s;
           -o-animation-delay: 0.65s;
           animation-delay: 0.65s; }
-        /* line 113, sass/_home.sass */
+        /* line 139, sass/_home.sass */
         body.home .popcorn_users .content div img.image12 {
           left: 504px;
           -webkit-animation-delay: 0.5s;
           -moz-animation-delay: 0.5s;
           -o-animation-delay: 0.5s;
           animation-delay: 0.5s; }
-        /* line 117, sass/_home.sass */
+        /* line 143, sass/_home.sass */
         body.home .popcorn_users .content div img.image13 {
           left: 630px;
           -webkit-animation-delay: 0.6s;
           -moz-animation-delay: 0.6s;
           -o-animation-delay: 0.6s;
           animation-delay: 0.6s; }
-        /* line 121, sass/_home.sass */
+        /* line 147, sass/_home.sass */
         body.home .popcorn_users .content div img.image14 {
           left: 756px;
           -webkit-animation-delay: 0.35s;
           -moz-animation-delay: 0.35s;
           -o-animation-delay: 0.35s;
           animation-delay: 0.35s; }
-/* line 125, sass/_home.sass */
+/* line 151, sass/_home.sass */
 body.home .examples {
   background: rgba(0, 0, 0, 0.2); }
-  /* line 128, sass/_home.sass */
+  /* line 154, sass/_home.sass */
   body.home .examples h2 {
     margin-bottom: 1em; }
-  /* line 131, sass/_home.sass */
+  /* line 157, sass/_home.sass */
   body.home .examples img {
     display: block;
     float: left;
     margin: 0 2em 2em 0; }
-    /* line 136, sass/_home.sass */
+    /* line 162, sass/_home.sass */
     body.home .examples img:nth-child(3n+1) {
       margin-right: 0; }

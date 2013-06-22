@@ -13,6 +13,7 @@
 
   <script src="js/vendor/modernizr-2.6.2.min.js"></script>
   <script src="js/vendor/jquery-1.9.1.min.js"></script>
+  <script src="js/vendor/popcorn-complete.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main-min.js"></script>
 </head>
@@ -29,66 +30,75 @@
     </ul>
   </nav>
 
-  <div class="intro">
-    <img src="img/logo.png" class="logo">
+  <div class="video_container">
+    <video id="video" preload="auto">
+      <source src="http://video-js.zencoder.com/oceans-clip.mp4" type="video/mp4">
+      <source src="http://video-js.zencoder.com/oceans-clip.webm" type="video/webm">
+    </video>
   </div>
 
-  <img src="img/video-placeholder.png" class="intro_video">
+  <div class="page_content">
 
-  <section class="text">
-    <div class="content">
-      <div>
-        <h2>Popcorn.js Is the Future</h2>
-        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus eget enim quis mauris convallis aliquet ac vitae eros. Sed condimentum sapien et nibh dictum in varius orci gravida. Etiam tempus, diam congue consequat volutpat, lectus nibh mattis nibh, vitae blandit nisl lectus non neque. Etiam quis lobortis nibh. Vivamus pharetra vestibulum nulla, vel ultrices mauris blandit in. In consequat mi ac elit mollis tempus. Vestibulum et lacus lobortis metus ullamcorper hendrerit quis id leo. Vestibulum vehicula leo ac dui pretium tincidunt ac vitae libero. Sed sit amet porttitor arcu. Sed in orci orci, ac lacinia tortor. Morbi iaculis, elit quis vulputate tempor, nisl purus lobortis urna, eleifend consectetur massa nisi a nisi. Mauris accumsan rutrum dictum. Nam in sapien ligula. Ut diam purus, pulvinar tincidunt commodo nec, gravida eget nisl.</p>
-      </div>
-      <div>
-        <h2>Project Details</h2>
-        <p>Maecenas faucibus dictum libero ac auctor. Etiam in turpis non arcu dignissim imperdiet. Aenean congue neque ullamcorper turpis sodales quis ultricies sem tristique. Nulla sit amet laoreet nisi. Proin nibh lectus, congue vel loborti.</p>
-      </div>
+    <div class="logo">
+      <img src="img/logo.png">
     </div>
-  </section>
 
-  <section class="popcorn_users">
-    <div class="content">
-      <h2>Popcorn Lovers Everywhere!</h2>
-      <div>
-        <img class="image01" src="img/popcorn_users/01.png" alt="ONF NFB" title="ONF NFB">
-        <img class="image02" src="img/popcorn_users/02.png" alt="PBS NewsHour" title="PBS NewsHour">
-        <img class="image03" src="img/popcorn_users/03.png" alt="Arte" title="Arte">
-        <img class="image04" src="img/popcorn_users/04.png" alt="NPR" title="NPR">
-        <img class="image05" src="img/popcorn_users/05.png" alt="BBC" title="BBC">
-        <img class="image06" src="img/popcorn_users/06.png" alt="Bocoup" title="Bocoup">
-        <img class="image07" src="img/popcorn_users/07.png" alt="Ocupop" title="Ocupop">
+    <section class="intro">
+      <div class="content">
+        <div>
+          <h2>Popcorn.js Is the Future</h2>
+          <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus eget enim quis mauris convallis aliquet ac vitae eros. Sed condimentum sapien et nibh dictum in varius orci gravida. Etiam tempus, diam congue consequat volutpat, lectus nibh mattis nibh, vitae blandit nisl lectus non neque. Etiam quis lobortis nibh. Vivamus pharetra vestibulum nulla, vel ultrices mauris blandit in. In consequat mi ac elit mollis tempus. Vestibulum et lacus lobortis metus ullamcorper hendrerit quis id leo. Vestibulum vehicula leo ac dui pretium tincidunt ac vitae libero. Sed sit amet porttitor arcu. Sed in orci orci, ac lacinia tortor. Morbi iaculis, elit quis vulputate tempor, nisl purus lobortis urna, eleifend consectetur massa nisi a nisi. Mauris accumsan rutrum dictum. Nam in sapien ligula. Ut diam purus, pulvinar tincidunt commodo nec, gravida eget nisl.</p>
+        </div>
+        <div>
+          <h2>Project Details</h2>
+          <p>Maecenas faucibus dictum libero ac auctor. Etiam in turpis non arcu dignissim imperdiet. Aenean congue neque ullamcorper turpis sodales quis ultricies sem tristique. Nulla sit amet laoreet nisi. Proin nibh lectus, congue vel loborti.</p>
+        </div>
       </div>
-      <div>
-        <img class="image08" src="img/popcorn_users/08.png" alt="Al Jazeera" title="Al Jazeera">
-        <img class="image09" src="img/popcorn_users/09.png" alt="Radiolab" title="Radiolab">
-        <img class="image10" src="img/popcorn_users/10.png" alt="Internet Archive" title="Internet Archive">
-        <img class="image11" src="img/popcorn_users/11.png" alt="Zeega" title="Zeega">
-        <img class="image12" src="img/popcorn_users/12.png" alt="France Culture" title="France Culture">
-        <img class="image13" src="img/popcorn_users/13.png" alt="BBG" title="BBG">
-        <img class="image14" src="img/popcorn_users/14.png" alt="WNYC" title="WNYC">
+    </section>
+
+    <section class="popcorn_users">
+      <div class="content">
+        <h2>Popcorn Lovers Everywhere!</h2>
+        <div>
+          <img class="image01" src="img/popcorn_users/01.png" alt="ONF NFB" title="ONF NFB">
+          <img class="image02" src="img/popcorn_users/02.png" alt="PBS NewsHour" title="PBS NewsHour">
+          <img class="image03" src="img/popcorn_users/03.png" alt="Arte" title="Arte">
+          <img class="image04" src="img/popcorn_users/04.png" alt="NPR" title="NPR">
+          <img class="image05" src="img/popcorn_users/05.png" alt="BBC" title="BBC">
+          <img class="image06" src="img/popcorn_users/06.png" alt="Bocoup" title="Bocoup">
+          <img class="image07" src="img/popcorn_users/07.png" alt="Ocupop" title="Ocupop">
+        </div>
+        <div>
+          <img class="image08" src="img/popcorn_users/08.png" alt="Al Jazeera" title="Al Jazeera">
+          <img class="image09" src="img/popcorn_users/09.png" alt="Radiolab" title="Radiolab">
+          <img class="image10" src="img/popcorn_users/10.png" alt="Internet Archive" title="Internet Archive">
+          <img class="image11" src="img/popcorn_users/11.png" alt="Zeega" title="Zeega">
+          <img class="image12" src="img/popcorn_users/12.png" alt="France Culture" title="France Culture">
+          <img class="image13" src="img/popcorn_users/13.png" alt="BBG" title="BBG">
+          <img class="image14" src="img/popcorn_users/14.png" alt="WNYC" title="WNYC">
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="examples">
-    <div class="content">
-      <h2>Examples</h2>
+    <section class="examples">
+      <div class="content">
+        <h2>Examples</h2>
 
-      <img src="img/example-placeholder.png">
-      <img src="img/example-placeholder.png">
-      <img src="img/example-placeholder.png">
+        <img src="img/example-placeholder.png">
+        <img src="img/example-placeholder.png">
+        <img src="img/example-placeholder.png">
 
-      <img src="img/example-placeholder.png">
-      <img src="img/example-placeholder.png">
-      <img src="img/example-placeholder.png">
+        <img src="img/example-placeholder.png">
+        <img src="img/example-placeholder.png">
+        <img src="img/example-placeholder.png">
 
-      <img src="img/example-placeholder.png">
-      <img src="img/example-placeholder.png">
-      <img src="img/example-placeholder.png">
-    </div>
-  </section>
+        <img src="img/example-placeholder.png">
+        <img src="img/example-placeholder.png">
+        <img src="img/example-placeholder.png">
+      </div>
+    </section>
+
+  </div>
 
 </body>
 </html>
